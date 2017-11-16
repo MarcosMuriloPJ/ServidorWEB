@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Alunos>
+   <Aluno>
+      <CPF>111.222.333.15</CPF>
+      <Nome>João</Nome>
+      <Data>2002-05-30T00:00:00</Data>
+      <Mae>Maria</Mae>
+      <Bairro>Urciano Lemos</Bairro>
+      <Logradouro>Bonifácio Pereira</Logradouro>
+      <Nro>12</Nro>
+      <Complemento></Complemento>
+   </Aluno>
+   <Aluno>
+      <CPF>444.222.444.15</CPF>
+      <Nome>Marcos</Nome>
+      <Data>2003-03-31T00:00:00</Data>
+      <Mae>Maria</Mae>
+      <Bairro>Urciano Lemos</Bairro>
+      <Logradouro>Bonifácio Pereira</Logradouro>
+      <Nro>12</Nro>
+      <Complemento></Complemento>
+   </Aluno>
+   <Aluno>
+      <CPF>777.777.777.15</CPF>
+      <Nome>Nicole</Nome>
+      <Data>2011-11-20T00:00:00</Data>
+      <Mae>Mônica</Mae>
+      <Bairro>Urciano Lemos</Bairro>
+      <Logradouro>Bonifácio Pereira</Logradouro>
+      <Nro>12</Nro>
+      <Complemento></Complemento>
+   </Aluno>
+   <Aluno>
+      <CPF>666.766.766.15</CPF>
+      <Nome>Rafaela</Nome>
+      <Data>1990-11-20T00:00:00</Data>
+      <Mae>Isabela</Mae>
+      <Bairro>Capitão X</Bairro>
+      <Logradouro>Oliva</Logradouro>
+      <Nro>321</Nro>
+      <Complemento>B</Complemento>
+   </Aluno>
+</Alunos>
