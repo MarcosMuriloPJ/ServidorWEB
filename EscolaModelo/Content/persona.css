@@ -1,0 +1,13 @@
+﻿/*Espaçamentos*/
+.tab-content {
+    padding: 30px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.bx-acao {
+    padding-top: 70px;
+    padding-bottom: 10px;
+    text-align: right;
+}
+

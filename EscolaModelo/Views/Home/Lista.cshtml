@@ -1,0 +1,29 @@
+﻿@model IEnumerable<EscolaModelo.Models.Aluno>
+
+<table class="table table-bordered table-hover">
+    <thead class="alert-info">
+        <tr>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+        </tr>
+    </thead>
+    <tbody id="lista-alunos">
+
+        @foreach (var item in Model)
+        {
+            <tr data-id="@item.Id" data-nome="@item.Nome" data-toggle="modal" data-target="#modalDel">
+                <td>
+                    @Html.DisplayFor(modelItem => item.CPF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNasc)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

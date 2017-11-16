@@ -1,0 +1,80 @@
+﻿@{
+        ViewBag.Title = "Início";
+}
+
+<!-- Caixa com título preenchido via script -->
+<div class="jumbotron">
+    <h1>
+        <span id="titulo-principal"></span> de Dados dos Alunos
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <!-- ABAS -->
+        <ul class="nav nav-tabs nav-justified">
+            <!-- Importação -->
+            <li class="active">
+                <a id="tab-importacao" href="#importacao" data-toggle="tab" aria-expanded="false">Importação</a>
+            </li>
+            <!-- Visualização -->
+            <li>
+                <a id="tab-visualizacao" href="#visualizacao" data-toggle="tab" aria-expanded="false">Visualização</a>
+            </li>
+        </ul>
+
+        <!-- CONTEÚDOS DE ABAS -->
+        <div class="tab-content">
+            
+            <!-- Importação -->
+            <div id="importacao" class="tab-pane fade in active">
+                <p class="alert alert-info">Selecione o arquivo .XML com os dados desejados para importação</p>
+
+                <!-- Entrada do arquivo .XML e botão de importar -->
+                @using (Html.BeginForm("Adicionar", "Home", FormMethod.Post, new { encType = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <input class="filestyle" type="file" name="import" id="import" data-buttonName="btn-warning" data-buttonText="&nbsp;&nbsp;Escolher Arquivo">
+                    <div class="bx-acao">
+                        <button type="submit" class="btn btn-lg btn-success">Importar</button>
+                    </div>
+                }
+            </div>
+
+            <!-- Visualização -->
+            <div id="visualizacao" class="tab-pane fade">
+                @Html.Partial("~/Views/Home/Lista.cshtml")
+
+                <!-- Modal para remover aluno -->
+                <div id="modalDel" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                            <!-- Título -->
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Remoção de registro</h4>
+                            </div>
+                            <!-- Frase -->
+                            <div class="modal-body">
+                                <h4 class="alert alert-danger">Deseja remover o aluno "<strong id="nome-aluno"></strong>"?</h4>
+                            </div>
+                            <!-- Botões de opções -->
+                            <div class="modal-footer">
+                                <div class="col-xs-6 text-center">
+                                    <input type="hidden" id="HdnIdAluno"/>
+                                    <button id="del-aluno" class="btn btn-lg btn-success" type="button" data-dismiss="modal">Sim</button>
+                                </div>
+                                <div class="col-xs-6 text-center">
+                                    <button type="button" class="btn btn-lg btn-danger" data-dismiss="modal">Não</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
